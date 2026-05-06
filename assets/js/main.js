@@ -4,6 +4,8 @@ let grid = document.querySelectorAll(".grid-container");
 let divs = document.querySelectorAll(".grid-container div"); 
 //let divs = document.querySelection(".grid-container div"); 
 
+let countClicks = 0; 
+
 let rotation = 0;
 document.addEventListener("click", function () {
     // let min = 10; 
@@ -49,3 +51,11 @@ document.addEventListener("click", randomize);
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min) + 1) + min; 
 }
+// When the user clicks on <div>, open the popup
+
+const myButton = document.getElementById("myButton");
+
+document.countShoppingChoices("click", function() {
+    count++; 
+    document.getElementById("displayCount").textContent = count; 
+}); 
