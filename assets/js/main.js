@@ -55,22 +55,28 @@ function randomNumber(min, max) {
 // When the user clicks on <div>, open the popup
 
 // Initialize a global counter
-let clickCount = 0;
+let evilCount = 0;
+
+let totalCount = 0; 
 
 // 1. Select all buttons with the specific class
-const buttons = document.querySelectorAll('.redirect-btn');
+const buttons = document.querySelectorAll('.evil-btn');
+
 
 // 2. Loop through each button to add a click listener
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         // Increment the total count
-        clickCount++;
-        console.log(`Total clicks: ${clickCount}`);
+        evilCount++;
+        totalCount++; 
+        console.log(`Total clicks: ${evilCount}`);
+
+        
 
         // 3. Check if we've reached 5 clicks
-        if (clickCount >= 5) {
+        if (evilCount >= 5) {
             // Redirect to the target page
-            window.location.href = "https://your-destination-url.com";
+            window.location.href = "aiFreakOut.html";
         }
     });
 });
