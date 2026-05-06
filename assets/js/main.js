@@ -111,6 +111,7 @@ document.querySelectorAll('.evil-btn').forEach(button => {
         if (evilCount >= 5) {
             window.location.href = "aiFreakOut.html";
         }
+        document.getElementById("totalCountDisplay").innerHTML = totalCount;
     });
 });
 
@@ -120,9 +121,7 @@ document.querySelectorAll('.norm-btn').forEach(button => {
         normCount++;
         totalCount++;
         console.log(`Normal clicks: ${normCount}`);
-
-        if (normCount >= 5) {
-            window.location.href = "normalPage.html";
-        }
+        document.getElementById("totalCountDisplay").innerHTML = totalCount;
+        
     });
 });
