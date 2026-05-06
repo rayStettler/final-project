@@ -56,14 +56,36 @@ function randomNumber(min, max) {
 
 // Initialize a global counter
 let evilCount = 0;
-
+let normCount = 0; 
 let totalCount = 0; 
 
 // 1. Select all buttons with the specific class
 const buttons = document.querySelectorAll('.evil-btn');
 
+/*
+const evilBtn = document.getElementById('btnEvil');
+const normBtn = document.getElementById('btnNorm'); 
+
+evilBtn.addEventListener(evilBtn => {
+    
+    evilBtn.addEventListener('click', () => {
+        // Increment the total count
+        evilCount++;
+        totalCount++; 
+        console.log(`Total clicks: ${evilCount}`);
+
+        // 3. Check if we've reached 5 clicks
+        if (evilCount >= 5) {
+            // Redirect to the target page
+            window.location.href = "aiFreakOut.html";
+        }
+    });
+});
+*/
 
 // 2. Loop through each button to add a click listener
+/*
+
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         // Increment the total count
@@ -71,12 +93,36 @@ buttons.forEach(button => {
         totalCount++; 
         console.log(`Total clicks: ${evilCount}`);
 
-        
-
         // 3. Check if we've reached 5 clicks
         if (evilCount >= 5) {
             // Redirect to the target page
             window.location.href = "aiFreakOut.html";
+        }
+    });
+}); */
+
+// Evil buttons
+document.querySelectorAll('.evil-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        evilCount++;
+        totalCount++;
+        console.log(`Evil clicks: ${evilCount}`);
+
+        if (evilCount >= 5) {
+            window.location.href = "aiFreakOut.html";
+        }
+    });
+});
+
+// Normal buttons
+document.querySelectorAll('.norm-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        normCount++;
+        totalCount++;
+        console.log(`Normal clicks: ${normCount}`);
+
+        if (normCount >= 5) {
+            window.location.href = "normalPage.html";
         }
     });
 });
