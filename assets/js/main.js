@@ -59,8 +59,10 @@ let evilCount = 0;
 let normCount = 0; 
 let totalCount = 0; 
 
+const messageElement = document.getElementById('message');
+
 // 1. Select all buttons with the specific class
-const buttons = document.querySelectorAll('.evil-btn');
+//const buttons = document.querySelectorAll('.evil-btn');
 
 /*
 const evilBtn = document.getElementById('btnEvil');
@@ -107,7 +109,13 @@ document.querySelectorAll('.evil-btn').forEach(button => {
         evilCount++;
         totalCount++;
         console.log(`Evil clicks: ${evilCount}`);
+        
+        if(evilCount == 2)
+        {
+            messageElement.textContent = "Evil buttion hit twice";
+        }
 
+        
         if (evilCount >= 5) {
             window.location.href = "aiFreakOut.html";
         }
