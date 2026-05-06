@@ -51,29 +51,31 @@
 .header {
 	margin-top: -1vw; 
 	margin-left: -1vw;
-	 
 	width: 101vw;
 	background-color: #00A7E1;
 	display: grid;
   	place-items: center; 
-
 	height: 10vw;
 }
 
 .items-container {
+	
 	border: 0.25vw solid black; /* Creates the box outline */
 	padding: 0.5vw;           /* Adds space between the text and the border */
 	width: 62vw;            /* Sets the width of the box */
 	display: flex;
 	align-items: center;    
-	margin-top: 3vw;  
+	margin-top: 2vw;  
+	
+	justify-content: center; /* Horizontal centering */
 	
 	background-color: #bde6f4; /* Optional background color */
 }
 
 .items {
+	
 	border: 0.25vw solid black; /* Creates the box outline */
-	padding: 0.5vw;           /* Adds space between the text and the border */
+	padding: 1vw;           /* Adds space between the text and the border */
 	width: 10vw;  
 	height: 15vw;          /* Sets the width of the box */
 	display: flex;
@@ -81,16 +83,17 @@
 	margin-bottom: 0.25vw;
 	margin-left: 0.5vw;
 	margin-right: 0.5vw;
-	justify-content: center; /* Horizontal centering */
-	 flex-direction: column;
+	text-align: center;
+	flex-direction: column;
 	background-color: #fff8dc; /* Optional background color */
 }
 
 .boxImage img{
+	
 	width: 8vw;
 	height: 8vw; 
 	object-fit: contain;
-	
+	margin-bottom: -2vw;
 	max-width: 100%;
 }
 
@@ -102,5 +105,11 @@ h2 {
 h3 {
 	font-size: 2vw; 
 	color: black; 
+}
+
+h4 {
+	font-size: 1.5vw; 
+	color: black; 
+	
 }
 
