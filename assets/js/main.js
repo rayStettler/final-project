@@ -110,13 +110,9 @@ document.querySelectorAll('.evil-btn').forEach(button => {
         totalCount++;
         console.log(`Evil clicks: ${evilCount}`);
         
-        if(evilCount == 2)
-        {
-            messageElement.textContent = "Evil buttion hit twice";
-        }
+        messages(); 
 
-        
-        if (evilCount >= 5) {
+        if (evilCount >= 10) {
             window.location.href = "aiFreakOut.html";
         }
         document.getElementById("totalCountDisplay").innerHTML = totalCount;
@@ -128,8 +124,19 @@ document.querySelectorAll('.norm-btn').forEach(button => {
     button.addEventListener('click', () => {
         normCount++;
         totalCount++;
+
+        messages(); 
+
         console.log(`Normal clicks: ${normCount}`);
         document.getElementById("totalCountDisplay").innerHTML = totalCount;
         
     });
 });
+
+function messages()
+{
+    if(evilCount == 0 && normCount == 1)
+    {
+        messageElement.textContent = "Nice selection! Is that for you or Ellie?";
+    }
+}

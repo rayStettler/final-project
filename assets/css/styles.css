@@ -89,7 +89,6 @@
 }
 
 .boxImage img{
-	
 	width: 8vw;
 	height: 8vw; 
 	object-fit: contain;
@@ -103,7 +102,7 @@ h2 {
 }
 
 h3 {
-	font-size: 2vw; 
+	font-size: 2.5vw; 
 	color: black; 
 }
 
@@ -119,6 +118,6 @@ h5 {
 }
 
 h6 {
-	font-size: 1vw; 
+	font-size: 1.2vw; 
 	color: black; 
 }
