@@ -6,7 +6,6 @@ let divs = document.querySelectorAll(".grid-container div");
 
 const myButton = document.getElementById('myButton'); // Select your button
 
-
 let rotation = 0;
 /*
 document.addEventListener("click", function () {
@@ -109,8 +108,8 @@ document.querySelectorAll('.evil-btn').forEach(button => {
         evilCount++;
         totalCount++;
         console.log(`Evil clicks: ${evilCount}`);
-        
-        messages(); 
+        let evil = true; 
+        messages(evil); 
 
         if (evilCount >= 10) {
             window.location.href = "aiFreakOut.html";
@@ -124,18 +123,32 @@ document.querySelectorAll('.norm-btn').forEach(button => {
     button.addEventListener('click', () => {
         normCount++;
         totalCount++;
-
-        messages(); 
+        let evil = false; 
+        messages(evil); 
 
         console.log(`Normal clicks: ${normCount}`);
         document.getElementById("totalCountDisplay").innerHTML = totalCount;
         
     });
 });
+ 
+document.querySelectorAll('.freakOutPage').forEach(button=>{  
+    
+    
+    messageElement.textContent = "Called";
+});
 
-function messages()
+function messages(isEvil)
 {
-    if(evilCount == 0 && normCount == 1)
+    if(!isEvil && evilCount == 0 && normCount == 1)
+    {
+        messageElement.textContent = "Nice selection! Is that for you or Ellie?";
+    }
+    else if(!isEvil && evilCount == 1)
+    {
+        messageElement.textContent = "Nice selection! Is that for you or Ellie?";
+    }
+    else if(isEvil && evilCount == 1 && normCount == 1)
     {
         messageElement.textContent = "Nice selection! Is that for you or Ellie?";
     }
