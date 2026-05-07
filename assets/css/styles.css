@@ -22,7 +22,7 @@
 	border: 0.25vw solid black; /* Creates the box outline */
 	padding: 1vw;           /* Adds space between the text and the border */
 	width: 50vw;            /* Sets the width of the box */
-	background-color: #D9E5D6; /* Optional background color */
+	background-color: #b9ecff; /* Optional background color */
 }
 
 .signInBox {
@@ -40,7 +40,7 @@
 	border: 0.25vw solid black; /* Creates the box outline */
 	width: 30vw;
 	height: 30vw; 
-	margin-left: 65vw;
+	margin-left: 67vw;
  	margin-right: auto;
 	margin-top: 3vw;
 	/*background-color: #FF9B42; */ 
@@ -67,7 +67,7 @@
 	display: flex;
 	align-items: center;    
 	margin-top: 2vw;  
-	
+	margin-left: 1.5vw; 
 	justify-content: center; /* Horizontal centering */
 	
 	background-color: #bde6f4; /* Optional background color */
