@@ -43,7 +43,8 @@
 	margin-left: 65vw;
  	margin-right: auto;
 	margin-top: 3vw;
-	background-color: #FF9B42;
+	/*background-color: #FF9B42; */ 
+	background: radial-gradient(#F7A072, #F57200);
   position: fixed;
 }
 
@@ -52,7 +53,7 @@
 	margin-top: -1vw; 
 	margin-left: -1vw;
 	width: 101vw;
-	background-color: #00A7E1;
+	background-color: #007AA3;
 	display: grid;
   	place-items: center; 
 	height: 10vw;
@@ -85,7 +86,7 @@
 	margin-right: 0.5vw;
 	text-align: center;
 	flex-direction: column;
-	background-color: #fff8dc; /* Optional background color */
+	background-color: #FFFFFF; /* Optional background color */
 }
 
 .boxImage img{
@@ -119,5 +120,10 @@ h5 {
 
 h6 {
 	font-size: 1.2vw; 
+	color: black; 
+}
+
+a {
+	font-size: 1.1vw;
 	color: black; 
 }
