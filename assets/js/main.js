@@ -37,14 +37,16 @@ document.querySelectorAll('.norm-btn').forEach(button => {
     });
 });
  
-document.querySelectorAll('.freakOutPage').forEach(button=>{  
-    button.addEventListener('click', () => {
-        freakOutCount++; 
-    
-        messageElement.textContent = "Called";
-        console.log(`Freak Out Clicks: ${freakOutCount}`);
-    });
-    
+window.addEventListener('click', function(event) {
+    // Replace this with the "activity" you want to happen
+    console.log("Screen clicked at:", event.clientX, event.clientY);
+    //alert("You clicked the screen!");
+     // Create a new element
+    const newText = document.createElement("h5");
+    // Set the text content
+    newText.textContent = "You are not Catherine";
+    // Add it to the page
+    document.body.appendChild(newText);
 });
 
 function messages(isEvil)
