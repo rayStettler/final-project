@@ -7,6 +7,7 @@ let freakOutCount = 0;
 
 const messageElement = document.getElementById('message');
 
+
 // Evil buttons
 document.querySelectorAll('.evil-btn').forEach(button => {
     button.addEventListener('click', () => {
@@ -38,16 +39,33 @@ document.querySelectorAll('.norm-btn').forEach(button => {
 });
  
 window.addEventListener('click', function(event) {
-    // Replace this with the "activity" you want to happen
-    console.log("Screen clicked at:", event.clientX, event.clientY);
-    //alert("You clicked the screen!");
-     // Create a new element
-    const newText = document.createElement("h5");
-    // Set the text content
-    newText.textContent = "You are not Catherine";
-    // Add it to the page
-    document.body.appendChild(newText);
+    if (window.location.pathname === "/aiFreakOut.html") {
+        freakOutCount++; 
+
+        // 1. Create a new text element
+        const textElement = document.createElement('h5');
+        textElement.innerText = "You are not Catherine";
+        
+        // 2. Style it to appear at the click location
+        textElement.style.position = "absolute";
+        textElement.style.left = event.pageX + 'px';
+        textElement.style.top = event.pageY + 'px';
+        textElement.style.transform = `rotate(${randomNumber(-180, 180)}deg)`; 
+        let fontSize = randomNumber(2, 7);
+        textElement.style.fontSize = fontSize + 'vw'; 
+        // 3. Add it to the page
+        document.body.appendChild(textElement);
+
+        if (freakOutCount == 16) {
+            window.location.href = "brokenLoginPage.html";
+        }
+    }   
 });
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + 1) + min; 
+}
+
 
 function messages(isEvil)
 {
