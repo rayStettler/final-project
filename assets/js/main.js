@@ -7,6 +7,9 @@ let freakOutCount = 0;
 
 const messageElement = document.getElementById('message');
 
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + 1) + min; 
+}
 
 // Evil buttons
 document.querySelectorAll('.evil-btn').forEach(button => {
@@ -53,7 +56,7 @@ window.addEventListener('click', function(event) {
         textElement.style.transform = `rotate(${randomNumber(-180, 180)}deg)`; 
         let fontSize = randomNumber(2, 7);
         textElement.style.fontSize = fontSize + 'vw'; 
-        
+
         // 3. Add it to the page
         document.body.appendChild(textElement);
 
@@ -62,11 +65,6 @@ window.addEventListener('click', function(event) {
         }
     }   
 });
-
-function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min) + 1) + min; 
-}
-
 
 function messages(isEvil)
 {
@@ -176,17 +174,5 @@ function messages(isEvil)
         
         
     }
-    /*
-    if(!isEvil && evilCount == 0 && normCount == 1)
-    {
-        messageElement.textContent = "Nice selection! Is that for you or Ellie?";
-    }
-    else if(!isEvil && evilCount == 1)
-    {
-        messageElement.textContent = "Nice selection! Is that for you or Ellie?";
-    }
-    else if(isEvil && evilCount == 1 && normCount == 1)
-    {
-        messageElement.textContent = "Nice selection! Is that for you or Ellie?";
-    } */ 
+   
 }
