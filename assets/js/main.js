@@ -53,6 +53,7 @@ window.addEventListener('click', function(event) {
         textElement.style.transform = `rotate(${randomNumber(-180, 180)}deg)`; 
         let fontSize = randomNumber(2, 7);
         textElement.style.fontSize = fontSize + 'vw'; 
+        
         // 3. Add it to the page
         document.body.appendChild(textElement);
 
